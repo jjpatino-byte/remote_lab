@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <title>Arduino Serial</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+
+    <body>
+        <h1>Arduino Serial</h1>
+        
+        <div id="sample"></div>
+
+        <script>
+            var socket= io();
+            socket.on("data", function(data){
+                console.log(data);
+                document.getElementById("sample").innerHTML=data;
+
+            });
+ 
+        </script>
+
+
+    </body>
+
+
+</html>
